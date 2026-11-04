@@ -1,0 +1,87 @@
+my-app/
+├── client/                          # React + Vite + Tailwind frontend
+│   ├── public/                      # Static files
+│   ├── src/
+│   │   ├── assets/                  # Fonts, icons, images
+│   │   ├── components/              # UI components
+│   │   │   └── common/              # Reusable elements (e.g., Button, Input)
+│   │   ├── layouts/                 # Page layout templates
+│   │   ├── pages/                   # Route-based views
+│   │   ├── routes/                  # React Router logic
+│   │   ├── hooks/                   # Custom React hooks
+│   │   ├── store/                   # Redux/Zustand/global state
+│   │   ├── services/                # API calls, data logic
+│   │   ├── contexts/                # Auth, Theme, etc.
+│   │   ├── utils/                   # Frontend utilities
+│   │   ├── constants/               # Frontend constants
+│   │   ├── types/                   # TS interfaces
+│   │   ├── theme/                   # Tailwind themes, CSS vars
+│   │   ├── i18n/                    # Translations
+│   │   ├── App.tsx, main.tsx
+│   ├── index.html
+│   ├── vite.config.ts
+│   ├── tsconfig.json
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   ├── .eslintrc.js
+│   ├── .prettierrc
+│   └── .stylelintrc (if CSS used)
+
+├── server/                          # Node.js + Express backend
+│   ├── src/
+│   │   ├── config/                  # DB, CORS, env, etc.
+│   │   ├── controllers/             # Route handler logic
+│   │   ├── routes/                  # Express route files
+│   │   ├── services/                # Business logic
+│   │   ├── models/                  # Prisma / DB models
+│   │   ├── middleware/              # Error, Auth, CORS, Helmet, etc.
+│   │   ├── validators/              # Zod/Yup schemas
+│   │   ├── sockets/                 # WebSocket logic
+│   │   ├── jobs/                    # Cron jobs / Background workers
+│   │   ├── utils/                   # Helper functions
+│   │   ├── types/                   # Server-only types
+│   │   ├── logger/                  # Winston/Pino configuration
+│   │   ├── constants/               # Enums and values
+│   │   ├── app.ts                   # Express app instance
+│   │   └── server.ts                # Entry point
+│   ├── tests/                       # Jest/Supertest
+│   ├── .eslintrc.js
+│   └── .prettierrc
+
+├── shared/                          # Shared across client/server
+│   ├── types/                       # Universal types
+│   ├── utils/                       # Shared utility functions
+│   └── constants/                   # Shared constants/enums
+
+├── prisma/                          # Prisma ORM
+│   ├── schema.prisma
+│   ├── seed.ts                      # Seeding logic
+│   └── migrations/                  # DB migrations
+
+├── docker/                          # Docker + NGINX
+│   ├── Dockerfile.client
+│   ├── Dockerfile.server
+│   ├── nginx.conf
+│   └── certs/                       # SSL certs if needed
+
+├── scripts/                         # CLI automation
+│   ├── build.sh
+│   ├── start.sh
+│   └── deploy.sh
+
+├── .github/                         # GitHub Actions CI/CD
+│   └── workflows/
+│       ├── client.yml
+│       ├── server.yml
+│       └── deploy.yml
+
+├── .env                             # Local secrets
+├── .env.production                  # Production secrets
+├── docker-compose.yml              # Multi-service orchestration
+├── package.json                     # Monorepo root
+├── tsconfig.json                    # Base tsconfig (extends others)
+├── .gitignore
+├── README.md                        # Project overview
+├── CHANGELOG.md                     # Optional: version history
+├── .editorconfig                    # Consistent editor behavior
+├── .nvmrc                           # Node version lock
